@@ -2,7 +2,7 @@
 // Definire il prezzo per km
 const priceKm = 0.21;
 // Variabile Input Distanza da percorrere -> Variabile distanza da percorrere come numero float
-const inputDistanceToTravel = prompt("Inserisci quandi km vuoi percorrere");
+const inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere");
 const distanceToTravel = parseFloat(inputDistanceToTravel);
 //Variabile Input età utente-> Variabile età come numero intero
 const inputUserAge = prompt("Inserisci quanti anni hai");
@@ -68,7 +68,7 @@ if (discount !== 0) {
     console.log(`Il valore dello sconto è di ${discountValue}€`);
 } else {
     // Comunichiamo che non è presente sconto
-    console.log("Per questa corsa non è presente sconto ");
+    console.log("Per questa corsa non è presente sconto");
 }
 
 // Inizializziamo il valore del prezzo finito calcolandolo con la differenza tra fullPrice e discountValue
