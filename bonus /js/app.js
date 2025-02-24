@@ -19,15 +19,13 @@ let finalPrice;
 
 // Comunichiamo il prezzo per km all'utente
 console.log(`Il prezzo per ogni km è ${priceKm}€`);
-// Ripetiamo al utente il valore di età che ha inserito 
-console.log(`L'input che l'utente ha inserito come età l'utente è ${inputUserAge} anni`);
-// Ripetiamo al utente la distanza da percorerre inserita. 
 
 
 do {
     // Variabile Input Distanza da percorrere -> sostituiamo le virgole con i punti  ->  Variabile distanza da percorrere come numero float 
     inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere").replace(",", ".");
     distanceToTravel = parseFloat(inputDistanceToTravel)
+    // Ripetiamo al utente la distanza da percorerre inserita. 
     console.log(`L'input che l'utente ha inserito come distanza da percorrere è ${inputDistanceToTravel} km`);
     // Se l'input della distanza è un numero
     if (!isNaN(distanceToTravel) && distanceToTravel > 0) {
@@ -45,7 +43,9 @@ do {
 
 do {
     inputUserAge = prompt("Inserisci quanti anni hai");
-    userAge = parseInt(inputUserAge); 
+    userAge = parseInt(inputUserAge);
+    // Ripetiamo al utente il valore di età che ha inserito 
+    console.log(`L'input che l'utente ha inserito come età l'utente è ${inputUserAge} anni`);
     // Se l'input dell'età è un numero
     if (!isNaN(userAge)) {
         //Se l'età è inferiore ai 18 anni
