@@ -16,7 +16,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
  ### Soluzione:
 
   - **Preparazione**: 
-  
+
     - Definire il prezzo per km - Variabile priceKm
     - Definire la variabile del prezzo intero
     - Definire la variabile sconto
@@ -45,6 +45,6 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
     - Altrimenti 
       - Il prezzo finale è uguale al prezzo completo
     
-    - Il prezzo finale viene scritto in "forma umana" 
+    - il prezzo utente è definito con il prezzo finale ma viene scritto in "forma umana" 
 
-    - Si mostra all'utente il prezzo finale
+    - Si mostra all'utente il prezzo utente
