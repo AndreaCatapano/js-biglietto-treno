@@ -1,7 +1,7 @@
 
 // Definire il prezzo per km
 const priceKm = 0.21;
-// Variabile Input Distanza da percorrere -> Variabile distanza da percorrere come numero float
+// Variabile Input Distanza da percorrere -> Variabile distanza da percorrere come numero float -> sostituiamo le virgole con i punti
 const inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere").replace(",", ".");
 const distanceToTravel = parseFloat(inputDistanceToTravel);
 //Variabile Input età utente-> Variabile età come numero intero
@@ -37,6 +37,7 @@ else {
     //Si avvisa l'utente di aver inserito un valore sbagliato e si ferma il programma
     alert(`Il valore ${inputDistanceToTravel} non è un numero.`);
 }
+
 // Se l'input dell'età è un numero
 if (!isNaN(userAge)) {
     //Se l'età è inferiore ai 18 anni
@@ -53,7 +54,8 @@ if (!isNaN(userAge)) {
     alert(`Il valore ${inputUserAge} non è un numero.`);
 }
 
-if (!isNaN(fullPrice) && fullPrice > 0) {
+// Se il prezzo completo del biglietto è un numero ed è maggiore di 0 e l'età del utente è un numero 
+if ((!isNaN(fullPrice) && fullPrice > 0) && !isNaN(userAge)) {
     // Comunichiamo il prezzo pieno della corsa
     console.log(`Il prezzo pieno calcolato per questa corsa è di ${fullPrice}€`);
     // Se è presente dello sconto
@@ -68,11 +70,14 @@ if (!isNaN(fullPrice) && fullPrice > 0) {
         // Comunichiamo che non è presente sconto
         console.log("Per questa corsa non è presente sconto");
     }
+
+    // Inizializziamo il valore del prezzo finito calcolandolo con la differenza tra fullPrice e discountValue
+    finalPrice = parseFloat((fullPrice - discountValue).toFixed(2));
+    // Comunichiamo il prezzo finito al utente 
+    console.log(`Il prezzo finito per questo biglietto è di ${finalPrice}€`);
+} else {
+    //Chiediamo di ripetere l'operazione ricaricando la pagina
+    console.log("Input non accettato. Ricarica la pagina e riprova")
 }
 
-
-// Inizializziamo il valore del prezzo finito calcolandolo con la differenza tra fullPrice e discountValue
-finalPrice = parseFloat((fullPrice - discountValue).toFixed(2));
-// Comunichiamo il prezzo finito al utente 
-console.log(`Il prezzo finito per questo biglietto è di ${finalPrice}€`);
 

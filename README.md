@@ -11,7 +11,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
  - va applicato uno sconto del 40% per gli over 65.
  - L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
- --- 
+--- 
 
  ### Soluzione:
 
@@ -27,8 +27,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
     - Definire la variabile del prezzo intero
     - Definire prezzo finale
 
-
-
+---
 
   - **Gestione dati**: 
 
@@ -50,14 +49,16 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
     - Altimenti
          - Si avvisa l'utente di aver inserito un valore sbagliato e si interrompe il programma
 
+---
 
-
-    - Se il prezzo completo del biglietto è un numero ed è maggiore di 0
-      - Se lo sconto è diverso da 0 
-        - Iniziallizzazione del valore numerico dello sconto attraverso il calcolo della % dal prezzo intero
-     - Altrimenti 
-       - Comunichiamo che non è presente sconto per questa corsa
-
+  - Se il prezzo completo del biglietto è un numero ed è maggiore di 0 e l'età del utente è un numero 
+    - Se lo sconto è diverso da 0 
+      - Iniziallizzazione del valore numerico dello sconto attraverso il calcolo della % dal prezzo intero
+    - Altrimenti 
+      - Comunichiamo che non è presente sconto per questa corsa
     - Iniziallizzazione del prezzo finale da calcolare con la differenza di full price e il valore numerico dello sconto 
     - Aggiungi la proprietà toFixed(2) dei numeri float al prezzo finale per evitare di avere troppi numeri dopo la virgola
     - Si mostra all'utente il prezzo finale
+  - Altrimenti 
+    - Chiediamo di ripetere l'operazione ricaricando la pagina
+
