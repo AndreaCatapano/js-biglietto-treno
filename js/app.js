@@ -2,7 +2,7 @@
 // Definire il prezzo per km
 const priceKm = 0.21;
 // Variabile Input Distanza da percorrere -> Variabile distanza da percorrere come numero float
-const inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere");
+const inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere").replace(",", ".");
 const distanceToTravel = parseFloat(inputDistanceToTravel);
 //Variabile Input età utente-> Variabile età come numero intero
 const inputUserAge = prompt("Inserisci quanti anni hai");
@@ -53,23 +53,23 @@ if (!isNaN(userAge)) {
     alert(`Il valore ${inputUserAge} non è un numero.`);
 }
 
-if (fullPrice > 0) {
+if (!isNaN(fullPrice) && fullPrice > 0) {
     // Comunichiamo il prezzo pieno della corsa
     console.log(`Il prezzo pieno calcolato per questa corsa è di ${fullPrice}€`);
+    // Se è presente dello sconto
+    if (discount !== 0) {
+        // Comunichiamo la % di sconto 
+        console.log(`La riduzione per la fascia età è del ${discount}%`);
+        // Calcoliamo il valore dello sconto
+        discountValue = (fullPrice * discount) / 100
+        // Comunichiamo il valore numerico dello sconto
+        console.log(`Il valore dello sconto è di ${discountValue}€`);
+    } else {
+        // Comunichiamo che non è presente sconto
+        console.log("Per questa corsa non è presente sconto");
+    }
 }
 
-// Se è presente dello sconto
-if (discount !== 0) {
-    // Comunichiamo la % di sconto 
-    console.log(`La riduzione per la fascia età è del ${discount}%`);
-    // Calcoliamo il valore dello sconto
-    discountValue = (fullPrice * discount) / 100
-    // Comunichiamo il valore numerico dello sconto
-    console.log(`Il valore dello sconto è di ${discountValue}€`);
-} else {
-    // Comunichiamo che non è presente sconto
-    console.log("Per questa corsa non è presente sconto");
-}
 
 // Inizializziamo il valore del prezzo finito calcolandolo con la differenza tra fullPrice e discountValue
 finalPrice = parseFloat((fullPrice - discountValue).toFixed(2));

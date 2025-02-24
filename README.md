@@ -18,32 +18,13 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
   - **Preparazione**: 
 
     - Definire la costante per il prezzo per km - Variabile priceKm
-
-    - Definire attraverso l'input la distanza da percorrere
-    -Definire la variabile del prezzo intero
+    - Definire attraverso l'input la distanza da percorrere e sostituire eventuali virgole con punto
     - Si converte in un numero float
-      - Se l'input è un numero: 
-        - Iniziallizare la variabile prezzo intero con il calcolo del prodotto del prezzo al km e distanza di viaggio
-      - Se il numero è uguale a 0:
-        - Si avvisa l'utente di aver inserito 0 come distanza e si interrompe il programma 
-      - Altrimenti: 
-        - Si avvisa l'utente di aver inserito un valore sbagliato e si interrompe il programma 
-
-    - Definire la variabile sconto uguale a 0 
-    - Definire il valore numerico dello sconto uguale a 0 
     - Definire attraverso l'input l' età del utente
     - Si converte in un numero intero 
-        - Se l'input è un numero 
-          - Se l'età è inferiore ai 18 anni 
-            - inizializzare variabile sconto a 20%  
-          - Se l'età è supera i 65 anni 
-            - inizializzare variabile sconto al 40% 
-          - Altrimenti 
-            - lasciare la variabile sconto a 0
-      - Altimenti
-         - Si avvisa l'utente di aver inserito un valore sbagliato e si interrompe il programma
-    
-    
+    - Definire la variabile sconto uguale a 0 
+    - Definire il valore numerico dello sconto uguale a 0 
+    - Definire la variabile del prezzo intero
     - Definire prezzo finale
 
 
@@ -51,11 +32,32 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
   - **Gestione dati**: 
 
-    - Se lo sconto è maggiore di 0 
-       - Iniziallizzazione del valore numerico dello sconto attraverso il calcolo della % dal prezzo intero
-    
+     - Se l'input della distanza è un numero: 
+        - Iniziallizare la variabile prezzo intero con il calcolo del prodotto del prezzo al km e distanza di viaggio
+    - Se il numero è uguale a 0:
+        - Si avvisa l'utente di aver inserito 0 come distanza e si interrompe il programma 
+    - Altrimenti: 
+        - Si avvisa l'utente di aver inserito un valore sbagliato e si interrompe il programma 
+
+
+    - Se l'input dell'età è un numero 
+        - Se l'età è inferiore ai 18 anni 
+            - inizializzare variabile sconto a 20%  
+        - Se l'età è supera i 65 anni 
+            - inizializzare variabile sconto al 40% 
+        - Altrimenti 
+            - lasciare la variabile sconto a 0
+    - Altimenti
+         - Si avvisa l'utente di aver inserito un valore sbagliato e si interrompe il programma
+
+
+
+    - Se il prezzo completo del biglietto è un numero ed è maggiore di 0
+      - Se lo sconto è diverso da 0 
+        - Iniziallizzazione del valore numerico dello sconto attraverso il calcolo della % dal prezzo intero
+     - Altrimenti 
+       - Comunichiamo che non è presente sconto per questa corsa
 
     - Iniziallizzazione del prezzo finale da calcolare con la differenza di full price e il valore numerico dello sconto 
-    - Aggiungi la proprietà toFixed(2) al prezzo finale dei numeri float per evitare di avere troppi numeri dopo la virgola
-
+    - Aggiungi la proprietà toFixed(2) dei numeri float al prezzo finale per evitare di avere troppi numeri dopo la virgola
     - Si mostra all'utente il prezzo finale
