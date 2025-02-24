@@ -2,12 +2,13 @@
 // Definire il prezzo per km
 const priceKm = 0.21;
 // Variabile Input Distanza da percorrere -> Variabile distanza da percorrere come numero float -> sostituiamo le virgole con i punti
-let  inputDistanceToTravel;
+let inputDistanceToTravel;
 let distanceToTravel;
-let distanceIsaNumber = true; 
+let distanceIsaNumber = true;
 //Variabile Input età utente-> Variabile età come numero intero
-const inputUserAge = prompt("Inserisci quanti anni hai");
-const userAge = parseInt(inputUserAge);
+let inputUserAge;
+let userAge;
+let ageIsaNumber = true;
 // Definire sconto 
 let discount = 0;
 let discountValue = 0;
@@ -25,9 +26,9 @@ console.log(`L'input che l'utente ha inserito come età l'utente è ${inputUserA
 
 do {
     // Variabile Input Distanza da percorrere -> sostituiamo le virgole con i punti  ->  Variabile distanza da percorrere come numero float 
-     inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere").replace(",", ".");
-     distanceToTravel = parseFloat(inputDistanceToTravel)
-     console.log(`L'input che l'utente ha inserito come distanza da percorrere è ${inputDistanceToTravel} km`);
+    inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere").replace(",", ".");
+    distanceToTravel = parseFloat(inputDistanceToTravel)
+    console.log(`L'input che l'utente ha inserito come distanza da percorrere è ${inputDistanceToTravel} km`);
     // Se l'input della distanza è un numero
     if (!isNaN(distanceToTravel) && distanceToTravel > 0) {
         //Inizializziamo il prezzo intero calcolandolo con il prodotto del prezzo al km e distanza di viaggio
@@ -42,7 +43,27 @@ do {
 } while (!distanceIsaNumber)
 
 
-
+do {
+    inputUserAge = prompt("Inserisci quanti anni hai");
+    userAge = parseInt(inputUserAge); 
+    // Se l'input dell'età è un numero
+    if (!isNaN(userAge)) {
+        //Se l'età è inferiore ai 18 anni
+        if (userAge < 18) {
+            //Lo sconto è del 20%
+            discount = 20;
+        } // Se l'età è supera i 65 anni
+        else if (userAge >= 65) {
+            // Lo scontro è del 40%
+            discount = 40;
+        }
+        ageIsaNumber = true
+    } else {
+        //Si avvisa l'utente di aver inserito un valore sbagliato e si ferma il programma
+        alert(`Il valore ${inputUserAge} non è un numero.`);
+        ageIsaNumber = false
+    }
+} while (!ageIsaNumber)
 
 
 
