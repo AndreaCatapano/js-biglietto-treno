@@ -17,34 +17,45 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
   - **Preparazione**: 
 
-    - Definire il prezzo per km - Variabile priceKm
-    - Definire la variabile del prezzo intero
-    - Definire la variabile sconto
-    - Definire prezzo finale
-    - Definire prezzo Utente
-    - Variabile Input Distanza da percorrere -> Richiedi input numero km all'utente -> si rende float 
+    - Definire la costante per il prezzo per km - Variabile priceKm
+
+    - Definire attraverso l'input la distanza da percorrere
+    -Definire la variabile del prezzo intero
+    - Si converte in un numero float
       - Se l'input è un numero: 
-        - Si calcola il prezzo intero con il prodotto del prezzo al km e distanza di viaggio
+        - Iniziallizare la variabile prezzo intero con il calcolo del prodotto del prezzo al km e distanza di viaggio
+      - Se il numero è uguale a 0:
+        - Si avvisa l'utente di aver inserito 0 come distanza e si interrompe il programma 
       - Altrimenti: 
-        - Si avvisa l'utente di aver inserito un valore sbagliato 
-   - Variabile Input età utente-> Richiedi input dell'età del cliente -> si rende intero 
+        - Si avvisa l'utente di aver inserito un valore sbagliato e si interrompe il programma 
+
+    - Definire la variabile sconto uguale a 0 
+    - Definire il valore numerico dello sconto uguale a 0 
+    - Definire attraverso l'input l' età del utente
+    - Si converte in un numero intero 
         - Se l'input è un numero 
           - Se l'età è inferiore ai 18 anni 
-            - Lo sconto è del 20% 
+            - inizializzare variabile sconto a 20%  
           - Se l'età è supera i 65 anni 
-            - Lo scontro è del 40%
+            - inizializzare variabile sconto al 40% 
           - Altrimenti 
-            - Non ci sta sconto
+            - lasciare la variabile sconto a 0
       - Altimenti
-         - Si avvisa l'utente di aver inserito un valore sbagliato 
+         - Si avvisa l'utente di aver inserito un valore sbagliato e si interrompe il programma
+    
+    
+    - Definire prezzo finale
+
+
+
 
   - **Gestione dati**: 
 
     - Se lo sconto è maggiore di 0 
-       - Il prezzo finale è da calcolare applicando la formula per sottrarre la % di sconto al prezzo completo 
-    - Altrimenti 
-      - Il prezzo finale è uguale al prezzo completo
+       - Iniziallizzazione del valore numerico dello sconto attraverso il calcolo della % dal prezzo intero
     
-    - il prezzo utente è definito con il prezzo finale ma viene scritto in "forma umana" 
 
-    - Si mostra all'utente il prezzo utente
+    - Iniziallizzazione del prezzo finale da calcolare con la differenza di full price e il valore numerico dello sconto 
+    - Aggiungi la proprietà toFixed(2) al prezzo finale dei numeri float per evitare di avere troppi numeri dopo la virgola
+
+    - Si mostra all'utente il prezzo finale
