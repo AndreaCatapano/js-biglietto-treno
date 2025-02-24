@@ -77,7 +77,8 @@ if ((!isNaN(fullPrice) && fullPrice > 0) && !isNaN(userAge)) {
     console.log(`Il prezzo finito per questo biglietto è di ${finalPrice}€`);
 } else {
     //Chiediamo di ripetere l'operazione ricaricando la pagina
-    console.log("Input non accettato. Ricarica la pagina e riprova")
+    alert("Input non accettato. Riprova")
+    window.location.reload();
 }
 
 

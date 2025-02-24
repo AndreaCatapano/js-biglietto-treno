@@ -61,4 +61,5 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
     - Si mostra all'utente il prezzo finale
   - Altrimenti 
     - Chiediamo di ripetere l'operazione ricaricando la pagina
+    - Si ricarica la pagina e si ripete l'operazione 
 
