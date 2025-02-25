@@ -24,7 +24,7 @@ console.log(`Il prezzo per ogni km è ${priceKm}€`);
 do {
     // Variabile Input Distanza da percorrere -> sostituiamo le virgole con i punti  ->  Variabile distanza da percorrere come numero float 
     inputDistanceToTravel = prompt("Inserisci quanti km vuoi percorrere").replace(",", ".");
-    distanceToTravel = parseFloat(inputDistanceToTravel)
+    distanceToTravel = parseFloat(inputDistanceToTravel);
     // Ripetiamo al utente la distanza da percorerre inserita. 
     console.log(`L'input che l'utente ha inserito come distanza da percorrere è ${inputDistanceToTravel} km`);
     // Se l'input della distanza è un numero
@@ -57,11 +57,11 @@ do {
             // Lo scontro è del 40%
             discount = 40;
         }
-        ageIsaNumber = true
+        ageIsaNumber = true;
     } else {
         //Si avvisa l'utente di aver inserito un valore sbagliato e si ferma il programma
         alert(`Il valore ${inputUserAge} non è un numero.`);
-        ageIsaNumber = false
+        ageIsaNumber = false;
     }
 } while (!ageIsaNumber)
 
@@ -76,7 +76,7 @@ if ((!isNaN(fullPrice) && fullPrice > 0) && !isNaN(userAge)) {
         // Comunichiamo la % di sconto 
         console.log(`La riduzione per la fascia età è del ${discount}%`);
         // Calcoliamo il valore dello sconto
-        discountValue = (fullPrice * discount) / 100
+        discountValue = (fullPrice * discount) / 100;
         // Comunichiamo il valore numerico dello sconto
         console.log(`Il valore dello sconto è di ${discountValue}€`);
     } else {

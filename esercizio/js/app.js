@@ -63,7 +63,7 @@ if ((!isNaN(fullPrice) && fullPrice > 0) && !isNaN(userAge)) {
         // Comunichiamo la % di sconto 
         console.log(`La riduzione per la fascia età è del ${discount}%`);
         // Calcoliamo il valore dello sconto
-        discountValue = (fullPrice * discount) / 100
+        discountValue = (fullPrice * discount) / 100;
         // Comunichiamo il valore numerico dello sconto
         console.log(`Il valore dello sconto è di ${discountValue}€`);
     } else {
@@ -77,7 +77,7 @@ if ((!isNaN(fullPrice) && fullPrice > 0) && !isNaN(userAge)) {
     console.log(`Il prezzo finito per questo biglietto è di ${finalPrice}€`);
 } else {
     //Chiediamo di ripetere l'operazione ricaricando la pagina
-    alert("Input non accettato. Riprova")
+    alert("Input non accettato. Riprova");
     window.location.reload();
 }
 
